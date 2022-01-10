@@ -58,7 +58,7 @@ string cities[ANZAHL] = {
 //adjacency matrix of the graph
 unsigned int adistance[ANZAHL][ANZAHL] ={ 
   // 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
-	0  ,xxx,71 ,30 ,27 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx, //1
+    0  ,xxx,71 ,30 ,27 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx, //1
     xxx,0  ,133,49 ,xxx,xxx,xxx,xxx,xxx,81 ,40 ,44 ,93 ,xxx,xxx, //2
     71 ,133,0  ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx, //3
     30 ,49 ,xxx,0  ,xxx,xxx,xxx,xxx,xxx,65 ,xxx,xxx,xxx,xxx,xxx, //4
@@ -68,11 +68,11 @@ unsigned int adistance[ANZAHL][ANZAHL] ={
     xxx,xxx,xxx,xxx,55 ,52 ,67 ,0  ,18 ,50 ,xxx,xxx,xxx,xxx,xxx, //8
     xxx,xxx,xxx,xxx,54 ,xxx,xxx,18 ,0  ,xxx,xxx,xxx,xxx,xxx,xxx, //9
     xxx,81 ,xxx,65 ,65 ,55 ,94 ,50 ,xxx,0  ,xxx,61 ,xxx,xxx,xxx, //10
-	xxx,40 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,0  ,15 ,73 ,xxx,129, //11
+    xxx,40 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,0  ,15 ,73 ,xxx,129, //11
     xxx,44 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,61 ,15 ,0  ,xxx,xxx,128, //12
     xxx,93 ,xxx,xxx,xxx,xxx,xxx,xxx,xxx,xxx,73 ,xxx,0  ,xxx,125, //13
-	xxx,xxx,xxx,xxx,xxx,xxx,73 ,xxx,xxx,xxx,xxx,xxx,xxx,0  ,142, //14
-	xxx,xxx,xxx,xxx,xxx,xxx,125,xxx,xxx,xxx,129,128,125,142,  0  //15
+    xxx,xxx,xxx,xxx,xxx,xxx,73 ,xxx,xxx,xxx,xxx,xxx,xxx,0  ,142, //14
+    xxx,xxx,xxx,xxx,xxx,xxx,125,xxx,xxx,xxx,129,128,125,142,  0  //15
 };
 
 //initialize class 
