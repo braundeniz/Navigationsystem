@@ -52,9 +52,9 @@ class MainMenu(MDScreen):
             9: 'Freudenstadt',
             10: 'Reutlingen',
             11: 'Tübingen',
-            13: 'Ulm',
-            14: 'Lörrach',
-            15: 'Konstanz'
+            12: 'Ulm',
+            13: 'Lörrach',
+            14: 'Konstanz'
         }
 
         if (cnt==2):
