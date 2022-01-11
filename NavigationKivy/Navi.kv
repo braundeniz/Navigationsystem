@@ -1,0 +1,190 @@
+#initialize the different Screens
+#:import platform kivy.utils.platform
+
+#:import Clipboard kivy.core.clipboard.Clipboard
+
+<WindowManager>:
+
+
+    MainMenu:  
+
+
+<MainMenu>:
+    name:"main"
+
+
+
+
+        
+#:import Window kivy.core.window.Window
+    FloatLayout:
+        orientation:"vertical"
+        #size: root.width, root.height
+
+        
+
+        Image:
+            source: 'Dijkstra Graph.jpg'  # your image here
+            size: Window.size
+            #size_hint: None, None 
+            allow_stretch: True 
+            keep_ratio: False   
+
+        MDFillRoundFlatButton:
+            id: departure
+            text: "Departure"
+            font_size: 15
+            text_color: 32/255, 31/255, 14/255, 1 
+            pos_hint: {'x':0.5, 'y':0.94}
+
+        MDFillRoundFlatButton:
+            id: destination
+            text: "Destination"
+            font_size: 15
+            text_color: 32/255, 31/255, 14/255, 1 
+            pos_hint: {'x':0.5, 'y':0.88}
+
+        MDFillRoundFlatButton:
+            id: via
+            text: "Via"
+            font_size: 15
+            text_color: 32/255, 31/255, 14/255, 1 
+            pos_hint: {'x':0.5, 'y':0.82}
+
+        MDFillRoundFlatButton:
+            text: "Clear"
+            font_size: 15
+            text_color: 32/255, 31/255, 14/255, 1 
+            pos_hint: {'x':0.8, 'y':0.88}
+            on_press: root.clear()
+
+        MDFillRoundFlatButton:
+            text: "Print"
+            font_size: 15
+            text_color: 32/255, 31/255, 14/255, 1 
+            pos_hint: {'x':0.8, 'y':0.82}
+            on_press: root.print()
+
+        MDFillRoundFlatButton:
+            text: "Mannheim" 
+            pos_hint: { 'x':0.155, 'y':0.885}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('2')
+        
+        MDFillRoundFlatButton:
+            text: "Karlsruhe"
+            pos_hint: { 'x':0.097, 'y':0.76}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('0')
+
+        MDFillRoundFlatButton:
+            text: "Pforzheim"
+            pos_hint: { 'x':0.3, 'y':0.74}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('3')
+
+        MDFillRoundFlatButton:
+            text: "Stuttgart"
+            pos_hint: { 'x':0.52, 'y':0.725}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('1')
+        
+        MDFillRoundFlatButton:
+            text: "Rastatt"
+            pos_hint: { 'x':0.12, 'y':0.6}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('4')
+        MDFillRoundFlatButton:
+            text: "Kehl"
+            pos_hint: { 'x':0.03, 'y':0.49}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('8')
+
+        MDFillRoundFlatButton:
+            text: "Offenburg"
+            pos_hint: { 'x':0.13, 'y':0.35}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('7')
+
+        MDFillRoundFlatButton:
+            text: "Baden-Baden"
+            pos_hint: { 'x':0.235, 'y':0.485}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('5')
+
+        MDFillRoundFlatButton:
+            text: "Freiburg"
+            pos_hint: { 'x':0.135, 'y':0.2}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('6')
+
+        MDFillRoundFlatButton:
+            text: "Lörrach"
+            pos_hint: { 'x':0.13, 'y':0.03}
+            size_hint:(.07,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('13')
+
+        MDFillRoundFlatButton:
+            text: "Konstanz"
+            pos_hint: { 'x':0.47, 'y':0.03}
+            size_hint:(.1,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('14')
+
+        MDFillRoundFlatButton:
+            text: "Freudenstadt"
+            pos_hint: { 'x':0.405, 'y':0.475}
+            size_hint:(.11,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('9')
+
+        MDFillRoundFlatButton:
+            text: "Tübingen"
+            pos_hint: { 'x':0.61, 'y':0.466}
+            size_hint:(.11,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('11')
+
+        MDFillRoundFlatButton:
+            text: "Reutlingen"
+            pos_hint: { 'x':0.776, 'y':0.464}
+            size_hint:(.11,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('10')
+
+        MDFillRoundFlatButton:
+            text: "Ulm"
+            pos_hint: { 'x':0.85, 'y':0.285}
+            size_hint:(.11,.06)
+            text_color: 32/255, 31/255, 14/255, 1
+            md_bg_color: 181/255,229/255,29/255,255/255
+            on_press: root.cities('13')
+        
+        
+
+        
+        
